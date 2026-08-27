@@ -1,0 +1,21 @@
+# @stackline/redeyed full reference
+
+Version: {{PACKAGE_VERSION}}
+Baseline: redeyed 2.1.1
+API: redeyed(code, config, options?) -> { ast, tokens, comments, splits, code }
+
+Use this package to wrap or replace selected JavaScript tokens while preserving every unmodified source span, whitespace, hashbang, and comment. String, object, and function configs remain supported. Input configs are not mutated; frozen and null-prototype maps are accepted; property-like names are processed as data.
+
+Esprima 4 remains the default. Options include buildAst, jsx, nojoin, parser, and parserOptions. A custom parser is opt-in because parser token labels are not interchangeable.
+
+Evidence includes 226 upstream and regression assertions, 1,230 differential executions, 95.59% line coverage, TypeScript 3.9 and current types, browser bundles, and all 174 Cardinal downstream assertions.
+
+Install directly:
+npm install @stackline/redeyed
+
+Preserve the legacy name:
+npm install redeyed@npm:@stackline/redeyed
+
+Compatibility: https://alexandro.net/docs/vanilla/redeyed/guides/compatibility.md
+Licenses: https://alexandro.net/docs/vanilla/redeyed/guides/third-party-licenses.md
+Security: https://github.com/alexandroit/stackline-redeyed/blob/main/SECURITY.md

@@ -1,0 +1,11 @@
+# @stackline/redeyed {{PACKAGE_VERSION}}
+
+Source-preserving JavaScript token transforms with immutable configs, safe property handling, and parser adapters.
+
+Install: npm install @stackline/redeyed
+Alias migration: npm install redeyed@npm:@stackline/redeyed
+Documentation: https://alexandro.net/docs/vanilla/redeyed/
+Source: https://github.com/alexandroit/stackline-redeyed
+License: MIT; bundled Esprima uses BSD-2-Clause
+
+The default parser remains Esprima 4. Modern parsers are an explicit option and may expose different token labels.

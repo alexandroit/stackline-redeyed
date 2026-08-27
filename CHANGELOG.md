@@ -7,6 +7,17 @@ Versioning.
 
 ## [Unreleased]
 
+## [1.0.1] - 2026-08-26
+
+### Added
+
+- Public token-transform playground and machine-readable documentation.
+- Verbatim Esprima BSD-2-Clause redistribution terms for embedded browser
+  bundles.
+- Pinned CI, CodeQL, and immutable npm publication workflows.
+- Documentation build, crawler metadata, package checks, and production audit
+  gates.
+
 ## [1.0.0] - 2026-08-26
 
 ### Added
@@ -34,5 +45,6 @@ Versioning.
   shape, comments, splits, and source retention.
 - Original MIT copyright and permission notice.
 
-[Unreleased]: https://github.com/alexandroit/stackline-redeyed/compare/v1.0.0...HEAD
-[1.0.0]: https://github.com/alexandroit/stackline-redeyed/releases/tag/v1.0.0
+[Unreleased]: https://github.com/alexandroit/stackline-redeyed/compare/stackline-v1.0.1...HEAD
+[1.0.1]: https://github.com/alexandroit/stackline-redeyed/compare/stackline-v1.0.0...stackline-v1.0.1
+[1.0.0]: https://github.com/alexandroit/stackline-redeyed/tree/stackline-v1.0.0

@@ -17,7 +17,17 @@ const commonGlobals = {
 
 export default [
   {
-    ignores: ['coverage/**', 'dist/**', 'node_modules/**']
+    ignores: ['coverage/**', 'dist/**', 'node_modules/**', 'site-dist/**']
+  },
+  {
+    files: ['docs-site/**/*.js'],
+    languageOptions: {
+      globals: {
+        document: 'readonly',
+        globalThis: 'readonly',
+        navigator: 'readonly'
+      }
+    }
   },
   {
     files: ['**/*.js'],

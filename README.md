@@ -1,7 +1,21 @@
 # @stackline/redeyed
 
-Source-preserving JavaScript token transforms with immutable configuration and
-pluggable parsers.
+> Source-preserving JavaScript token transforms with immutable configuration
+> and pluggable parsers.
+
+[![npm version](https://img.shields.io/npm/v/@stackline/redeyed.svg?style=flat-square)](https://www.npmjs.com/package/@stackline/redeyed)
+[![npm downloads](https://img.shields.io/npm/dm/@stackline/redeyed.svg?style=flat-square)](https://www.npmjs.com/package/@stackline/redeyed)
+[![CI](https://img.shields.io/github/actions/workflow/status/alexandroit/stackline-redeyed/ci.yml?branch=main&style=flat-square&label=CI)](https://github.com/alexandroit/stackline-redeyed/actions/workflows/ci.yml)
+[![license](https://img.shields.io/npm/l/@stackline/redeyed.svg?style=flat-square)](LICENSE)
+
+**[Docs and transformer](https://alexandro.net/docs/vanilla/redeyed/)** |
+**[npm](https://www.npmjs.com/package/@stackline/redeyed)** |
+**[GitHub](https://github.com/alexandroit/stackline-redeyed)** |
+**[Migration](MIGRATION.md)** |
+**[Security](SECURITY.md)** |
+**[Changelog](CHANGELOG.md)**
+
+**Current package version:** `1.0.1`
 
 This package is an independent, maintained continuation of
 [`redeyed`](https://github.com/thlorenz/redeyed). It preserves the established
@@ -170,4 +184,4 @@ Stackline is not affiliated with or endorsed by the upstream author.
 
 MIT. The original copyright and permission notice remain in
 [LICENSE](LICENSE). Browser bundles also retain Esprima's BSD-2-Clause legal
-notice.
+terms in [THIRD_PARTY_LICENSES.md](THIRD_PARTY_LICENSES.md).

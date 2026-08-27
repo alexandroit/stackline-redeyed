@@ -1,6 +1,6 @@
 {
   "name": "@stackline/redeyed",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Source-preserving JavaScript token transforms with immutable configs and parser adapters",
   "type": "commonjs",
   "main": "./redeyed.js",
@@ -49,12 +49,13 @@
     "LICENSE",
     "NOTICE",
     "README.md",
-    "SECURITY.md"
+    "SECURITY.md",
+    "THIRD_PARTY_LICENSES.md"
   ],
   "scripts": {
     "clean": "node scripts/clean.mjs",
     "build": "node scripts/build.mjs",
-    "lint": "eslint redeyed.js index.mjs scripts test",
+    "lint": "eslint redeyed.js index.mjs scripts test docs-site",
     "test:upstream": "tape test/*.js",
     "test:compatibility": "node test/compatibility.js",
     "test:esm": "node test/esm.mjs",
@@ -63,9 +64,14 @@
     "test": "npm run test:upstream && npm run test:compatibility && npm run test:esm && npm run test:types && npm run test:browser",
     "test:coverage": "c8 --all --include=redeyed.js --check-coverage --lines 95 --functions 95 --branches 90 tape test/*.js",
     "test:smoke": "node scripts/smoke-install.mjs && node scripts/smoke-cardinal.mjs",
+    "test:docs": "npm run docs:build && node scripts/check-docs.mjs",
     "check:package": "publint && attw --pack .",
     "pack:check": "npm pack --dry-run",
-    "verify": "npm run lint && npm run build && npm test && npm run test:coverage && npm run test:smoke && npm run check:package && npm run pack:check",
+    "audit:dependencies": "npm audit --omit=dev --audit-level=low",
+    "audit:signatures": "npm audit signatures",
+    "docs:build": "npm run build && node scripts/build-docs.mjs",
+    "docs:serve": "node scripts/serve-docs.mjs",
+    "verify": "npm run clean && npm run lint && npm run build && npm test && npm run test:coverage && npm run test:smoke && npm run check:package && npm run pack:check && npm run test:docs && npm run audit:dependencies",
     "prepack": "npm run build"
   },
   "repository": {
