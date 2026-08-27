@@ -1,39 +1,117 @@
 {
-  "name": "redeyed",
-  "version": "2.1.1",
-  "description": "Takes JavaScript code, along with a config and returns the original code with tokens wrapped as configured.",
-  "author": "Thorsten Lorenz <thlorenz@gmx.de> (thlorenz.com)",
-  "main": "redeyed.js",
+  "name": "@stackline/redeyed",
+  "version": "1.0.0",
+  "description": "Source-preserving JavaScript token transforms with immutable configs and parser adapters",
+  "type": "commonjs",
+  "main": "./redeyed.js",
+  "module": "./index.mjs",
+  "types": "./index.d.ts",
+  "exports": {
+    ".": {
+      "types": {
+        "import": "./index.d.mts",
+        "require": "./index.d.cts",
+        "default": "./index.d.ts"
+      },
+      "browser": {
+        "import": "./dist/redeyed.browser.mjs",
+        "require": "./dist/redeyed.browser.cjs"
+      },
+      "import": "./index.mjs",
+      "require": "./redeyed.js",
+      "default": "./redeyed.js"
+    },
+    "./config": {
+      "types": "./config.d.ts",
+      "default": "./config.js"
+    },
+    "./config-es5": {
+      "types": "./config-es5.d.ts",
+      "default": "./config-es5.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "unpkg": "./dist/redeyed.global.js",
+  "jsdelivr": "./dist/redeyed.global.js",
+  "sideEffects": false,
+  "files": [
+    "dist",
+    "redeyed.js",
+    "index.mjs",
+    "index.d.ts",
+    "index.d.cts",
+    "index.d.mts",
+    "config.js",
+    "config.d.ts",
+    "config-es5.js",
+    "config-es5.d.ts",
+    "CHANGELOG.md",
+    "LICENSE",
+    "NOTICE",
+    "README.md",
+    "SECURITY.md"
+  ],
   "scripts": {
-    "test": "npm run run-test && npm run lint",
-    "run-test": "tape test/*.js",
-    "lint": "standart",
-    "demo-log": "node examples/replace-log",
-    "demo": "cd examples/browser; open index.html"
+    "clean": "node scripts/clean.mjs",
+    "build": "node scripts/build.mjs",
+    "lint": "eslint redeyed.js index.mjs scripts test",
+    "test:upstream": "tape test/*.js",
+    "test:compatibility": "node test/compatibility.js",
+    "test:esm": "node test/esm.mjs",
+    "test:types": "node node_modules/typescript-3-9/bin/tsc -p test/types/tsconfig.legacy.json && node node_modules/typescript/bin/tsc -p test/types/tsconfig.commonjs.json && node node_modules/typescript/bin/tsc -p test/types/tsconfig.modern.json",
+    "test:browser": "node scripts/check-browser.mjs",
+    "test": "npm run test:upstream && npm run test:compatibility && npm run test:esm && npm run test:types && npm run test:browser",
+    "test:coverage": "c8 --all --include=redeyed.js --check-coverage --lines 95 --functions 95 --branches 90 tape test/*.js",
+    "test:smoke": "node scripts/smoke-install.mjs && node scripts/smoke-cardinal.mjs",
+    "check:package": "publint && attw --pack .",
+    "pack:check": "npm pack --dry-run",
+    "verify": "npm run lint && npm run build && npm test && npm run test:coverage && npm run test:smoke && npm run check:package && npm run pack:check",
+    "prepack": "npm run build"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/thlorenz/redeyed.git"
+    "url": "git+https://github.com/alexandroit/stackline-redeyed.git"
   },
-  "files": [
-    "redeyed.js"
-  ],
+  "homepage": "https://alexandro.net/docs/vanilla/redeyed/",
+  "bugs": {
+    "url": "https://github.com/alexandroit/stackline-redeyed/issues"
+  },
   "keywords": [
-    "ast",
+    "javascript",
+    "tokens",
     "syntax",
-    "tree",
+    "transform",
     "source",
-    "wrap",
-    "metadata"
+    "parser",
+    "highlight",
+    "immutable",
+    "stackline"
+  ],
+  "author": "Stackline Maintainers",
+  "contributors": [
+    "Thorsten Lorenz",
+    "Ariya Hidayat"
   ],
   "license": "MIT",
-  "devDependencies": {
-    "cardinal": "~1.0.0",
-    "readdirp": "~2.1.0",
-    "standart": "^6.1.0",
-    "tape": "~4.9.0"
+  "engines": {
+    "node": ">=12"
+  },
+  "publishConfig": {
+    "access": "public"
   },
   "dependencies": {
-    "esprima": "~4.0.0"
+    "esprima": "4.0.1"
+  },
+  "devDependencies": {
+    "@arethetypeswrong/cli": "0.18.5",
+    "c8": "12.0.0",
+    "esbuild": "0.28.2",
+    "eslint": "10.9.1",
+    "espree": "11.2.0",
+    "publint": "0.3.24",
+    "redeyed-baseline": "npm:redeyed@2.1.1",
+    "tape": "5.10.2",
+    "typescript": "7.0.2",
+    "typescript-3-9": "npm:typescript@3.9.10"
   }
 }

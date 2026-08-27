@@ -1,6 +1,4 @@
 'use strict'
-/* eslint-disable no-template-curly-in-string */
-
 var test = require('tape')
 var util = require('util')
 var redeyed = require('..')
