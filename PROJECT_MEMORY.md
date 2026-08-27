@@ -4,9 +4,10 @@ package: redeyed
 upstream: https://github.com/thlorenz/redeyed
 stackline_package: "@stackline/redeyed"
 state: PUBLISHED
-registry_scope: verdaccio-only
-public_npm: false
-public_github: false
+registry_scope: verdaccio-and-public-npm
+public_npm: true
+public_github: true
+docs_production: true
 created: 2026-08-26
 last_updated: 2026-08-26
 ---
@@ -84,18 +85,19 @@ GO.
 ## Implementation Status
 
 Implementation, verification, packaging, and downstream adoption validation
-are complete. `@stackline/redeyed@1.0.0` is published only to the local
-Verdaccio registry. Public npm and public GitHub publication were not
-performed.
+are complete. The Verdaccio rehearsal was published as `1.0.0`; the exact
+final artifact is public as `@stackline/redeyed@1.0.1` on Verdaccio and npm.
+Source, CI, CodeQL, release assets, licensing evidence, and production
+documentation are public.
 
 ## Final Verification
 
-- 224 upstream and regression assertions passed.
+- 226 upstream and regression assertions passed.
 - 1,230 differential executions matched the official `redeyed@2.1.1` oracle.
 - Coverage: 95.59% lines, 92.48% branches, and 100% functions.
 - TypeScript 3.9.10 and 7.0.2 compile tests passed for CommonJS and ESM.
-- Browser global, ESM, packed-install, direct Verdaccio, and npm-alias smoke
-  tests passed.
+- Browser global, ESM, packed-install, Verdaccio, official npm, and npm-alias
+  smoke tests passed.
 - `publint` reported no findings and AreTheTypesWrong reported all entry points
   green, including `config` and `config-es5`.
 - The complete upstream `cardinal@2.1.1` suite passed 174 assertions and lint
@@ -103,15 +105,20 @@ performed.
 - Production audit reported zero vulnerabilities.
 - 303 dependency signatures and 26 attestations were verified.
 
-## Verdaccio Artifact
+## Public Artifact
 
-- package: `@stackline/redeyed@1.0.0`
+- package: `@stackline/redeyed@1.0.1`
 - tag: `latest`
-- files: 18
-- packed size: 106.2 kB
-- unpacked size: 465.1 kB
-- SHA-1: `c7ab6e5e989034ac2f94b91e2c8fe587f72bb54e`
-- integrity: `sha512-xukSXiH1rIJU3lJ+UIuS7GvoFgTnAn37zmHe1nIe96tzwvOAYho9vhgMxl5JQbfaczCPXuKhyqgfciRMM9BjQw==`
+- files: 19
+- packed size: 107.6 kB
+- unpacked size: 468.4 kB
+- SHA-1: `1536e65fc22c07c96e6fc583ef58d054e343d131`
+- integrity: `sha512-0x3Bpp2zeaPSTlEHpvvfY5OvDpS7bdrRzgyWBdGv3BAjFYISi1p/hbt1qZbfbEwwb91olSjznXVqakGoxVO6QA==`
+- source commit: `75e49ad1497d78c74c6f62e9c5ee89c10d32477e`
+- release: https://github.com/alexandroit/stackline-redeyed/releases/tag/stackline-v1.0.1
+- CI: https://github.com/alexandroit/stackline-redeyed/actions/runs/33033265512
+- CodeQL: https://github.com/alexandroit/stackline-redeyed/actions/runs/33033265553
+- documentation: https://alexandro.net/docs/vanilla/redeyed/
 
 ## Chronological Log
 
@@ -130,5 +137,10 @@ performed.
   exports, browser artifacts, and first-party types implemented.
 - 2026-08-26: all verification gates passed, including the full Cardinal
   consumer suite against the packed Verdaccio artifact.
-- 2026-08-26: `@stackline/redeyed@1.0.0` published to Verdaccio only; official
-  npm and public GitHub remained untouched.
+- 2026-08-26: `@stackline/redeyed@1.0.0` published to Verdaccio as the private
+  registry rehearsal.
+- 2026-08-26: exact Esprima BSD-2-Clause text added to the public attribution
+  inventory and verified against the installed dependency license.
+- 2026-08-26: final `1.0.1` artifact published unchanged to Verdaccio and npm;
+  public direct/alias smoke, audit, CI, CodeQL, release assets, documentation,
+  robots, and aggregate sitemaps passed.
