@@ -86,7 +86,7 @@ GO.
 
 Implementation, verification, packaging, and downstream adoption validation
 are complete. The Verdaccio rehearsal was published as `1.0.0`; the exact
-final artifact is public as `@stackline/redeyed@1.0.1` on Verdaccio and npm.
+current artifact is public as `@stackline/redeyed@1.0.2` on Verdaccio and npm.
 Source, CI, CodeQL, release assets, licensing evidence, and production
 documentation are public.
 
@@ -107,17 +107,19 @@ documentation are public.
 
 ## Public Artifact
 
-- package: `@stackline/redeyed@1.0.1`
+- package: `@stackline/redeyed@1.0.2`
 - tag: `latest`
 - files: 19
-- packed size: 107.6 kB
-- unpacked size: 468.4 kB
-- SHA-1: `1536e65fc22c07c96e6fc583ef58d054e343d131`
-- integrity: `sha512-0x3Bpp2zeaPSTlEHpvvfY5OvDpS7bdrRzgyWBdGv3BAjFYISi1p/hbt1qZbfbEwwb91olSjznXVqakGoxVO6QA==`
-- source commit: `75e49ad1497d78c74c6f62e9c5ee89c10d32477e`
-- release: https://github.com/alexandroit/stackline-redeyed/releases/tag/stackline-v1.0.1
-- CI: https://github.com/alexandroit/stackline-redeyed/actions/runs/33033265512
-- CodeQL: https://github.com/alexandroit/stackline-redeyed/actions/runs/33033265553
+- packed size: 109.3 kB
+- unpacked size: 477.1 kB
+- SHA-1: `0f587da76ec554f10bf614026db3e42ef477f578`
+- SHA-256: `65950782b291994e1a9a29d2cb0657f10c1186d4ba9ea7d1d5a54f6cde9a259b`
+- SHA-512: `c2e8dead0f6a0abcb0f0a89aee3e82ab209796346944938922f750a57571374f170937d7dfa2e0c85eb713d9ac1da297b53d346572f3d05145ada0dd047ff0ef`
+- integrity: `sha512-wujerQ9qCryw8Kia7j6CqyCXljRpRJOJIvdQpXVxN08XCTfX36LgyF63E9msHaKXtT00ZXLz0FFFraDdBH/w7w==`
+- source commit: `28bc7038a2a0280b468d4bbd19ad5c37c9c49ead`
+- immutable release: https://github.com/alexandroit/stackline-redeyed/releases/tag/stackline-v1.0.2
+- CI: https://github.com/alexandroit/stackline-redeyed/actions/runs/33297874728
+- CodeQL: https://github.com/alexandroit/stackline-redeyed/actions/runs/33297874732
 - documentation: https://alexandro.net/docs/vanilla/redeyed/
 
 ## Chronological Log
@@ -150,3 +152,11 @@ documentation are public.
   dependency graph terminates at zero dependencies. Release verification now
   rejects install warnings, invalid npm trees, and any production or full-lock
   audit finding before publication.
+- 2026-08-30: the deterministic `1.0.2` artifact passed Verdaccio and public
+  npm direct/alias installs with zero warnings and audit findings. CI and
+  CodeQL passed; the GitHub release is immutable with the exact tarball,
+  checksum, and CycloneDX SBOM. The npm OIDC attempt was rejected because this
+  repository is not yet registered as a Trusted Publisher, so the already
+  validated bytes were published with the configured administrator token.
+  Production documentation and the dynamic English, Portuguese, and French
+  catalog records expose version `1.0.2`.
