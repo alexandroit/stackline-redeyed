@@ -7,6 +7,17 @@ Versioning.
 
 ## [Unreleased]
 
+## [1.0.2] - 2026-08-30
+
+### Changed
+
+- Preserve the historical `esprima` dependency key while resolving it exactly
+  to maintained `@stackline/esprima@1.0.0`.
+- Require warning-free packed installs, valid dependency trees, and zero
+  production and full-lockfile audit findings.
+- Correct the npm publication workflow to address the local tarball path
+  explicitly.
+
 ## [1.0.1] - 2026-08-26
 
 ### Added
@@ -45,6 +56,7 @@ Versioning.
   shape, comments, splits, and source retention.
 - Original MIT copyright and permission notice.
 
-[Unreleased]: https://github.com/alexandroit/stackline-redeyed/compare/stackline-v1.0.1...HEAD
+[Unreleased]: https://github.com/alexandroit/stackline-redeyed/compare/stackline-v1.0.2...HEAD
+[1.0.2]: https://github.com/alexandroit/stackline-redeyed/compare/stackline-v1.0.1...stackline-v1.0.2
 [1.0.1]: https://github.com/alexandroit/stackline-redeyed/compare/stackline-v1.0.0...stackline-v1.0.1
 [1.0.0]: https://github.com/alexandroit/stackline-redeyed/tree/stackline-v1.0.0

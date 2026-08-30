@@ -1,6 +1,6 @@
 # Third-Party Licenses
 
-## Esprima 4.0.1 (BSD-2-Clause)
+## @stackline/esprima 1.0.0 / Esprima 4.0.1 (BSD-2-Clause)
 
 Copyright JS Foundation and other contributors, https://js.foundation/
 

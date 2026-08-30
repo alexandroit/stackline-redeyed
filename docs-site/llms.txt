@@ -6,6 +6,6 @@ Install: npm install @stackline/redeyed
 Alias migration: npm install redeyed@npm:@stackline/redeyed
 Documentation: https://alexandro.net/docs/vanilla/redeyed/
 Source: https://github.com/alexandroit/stackline-redeyed
-License: MIT; bundled Esprima uses BSD-2-Clause
+License: MIT; maintained @stackline/esprima runtime uses BSD-2-Clause
 
-The default parser remains Esprima 4. Modern parsers are an explicit option and may expose different token labels.
+The default parser remains Esprima 4 through the exact historical-key alias to @stackline/esprima@1.0.0. Modern parsers are an explicit option and may expose different token labels.

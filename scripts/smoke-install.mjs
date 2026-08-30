@@ -28,6 +28,15 @@ try {
     encoding: 'utf8'
   })
   assert.equal(installed.status, 0, installed.stderr)
+  assert.doesNotMatch(installed.stdout + installed.stderr, /npm warn|deprecated/i)
+
+  const tree = spawnSync('npm', ['ls', '--all'], { cwd: temporary, encoding: 'utf8' })
+  assert.equal(tree.status, 0, tree.stdout + tree.stderr)
+  const audit = spawnSync('npm', ['audit', '--omit=dev', '--audit-level=low'], {
+    cwd: temporary,
+    encoding: 'utf8'
+  })
+  assert.equal(audit.status, 0, audit.stdout + audit.stderr)
 
   const commonjs = spawnSync(process.execPath, ['-e', [
     "const redeyed = require('@stackline/redeyed');",
@@ -52,6 +61,7 @@ try {
     'package.json'
   ), 'utf8'))
   assert.equal(manifest.name, '@stackline/redeyed')
+  assert.equal(manifest.dependencies.esprima, 'npm:@stackline/esprima@1.0.0')
   await rm(tarball, { force: true })
 } finally {
   await rm(temporary, { force: true, recursive: true })

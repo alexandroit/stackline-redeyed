@@ -1,6 +1,6 @@
 {
   "name": "@stackline/redeyed",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Source-preserving JavaScript token transforms with immutable configs and parser adapters",
   "type": "commonjs",
   "main": "./redeyed.js",
@@ -68,10 +68,11 @@
     "check:package": "publint && attw --pack .",
     "pack:check": "npm pack --dry-run",
     "audit:dependencies": "npm audit --omit=dev --audit-level=low",
+    "audit:all": "npm audit --audit-level=low",
     "audit:signatures": "npm audit signatures",
     "docs:build": "npm run build && node scripts/build-docs.mjs",
     "docs:serve": "node scripts/serve-docs.mjs",
-    "verify": "npm run clean && npm run lint && npm run build && npm test && npm run test:coverage && npm run test:smoke && npm run check:package && npm run pack:check && npm run test:docs && npm run audit:dependencies",
+    "verify": "npm run clean && npm run lint && npm run build && npm test && npm run test:coverage && npm run test:smoke && npm run check:package && npm run pack:check && npm run test:docs && npm run audit:dependencies && npm run audit:all",
     "prepack": "npm run build"
   },
   "repository": {
@@ -106,7 +107,7 @@
     "access": "public"
   },
   "dependencies": {
-    "esprima": "4.0.1"
+    "esprima": "npm:@stackline/esprima@1.0.0"
   },
   "devDependencies": {
     "@arethetypeswrong/cli": "0.18.5",

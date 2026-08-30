@@ -5,5 +5,7 @@ copyright and MIT license terms are preserved in LICENSE.
 
 Original project: https://github.com/thlorenz/redeyed
 
-Browser bundles include Esprima 4.0.1. Its BSD-2-Clause redistribution terms
-are preserved in THIRD_PARTY_LICENSES.md.
+The historical dependency key `esprima` resolves to maintained
+`@stackline/esprima@1.0.0`. Browser bundles include its Esprima 4.0.1-compatible
+runtime. The BSD-2-Clause redistribution terms are preserved in
+THIRD_PARTY_LICENSES.md.

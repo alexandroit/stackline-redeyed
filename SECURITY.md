@@ -24,3 +24,10 @@ Upstream issue #22 concerns an old jQuery URL in an example shipped with
 `redeyed@2.1.1`. The example is not executed by the library. Stackline excludes
 that example from npm artifacts, but does not misrepresent the scanner finding
 as a CVE in redeyed's runtime.
+
+## Dependency Chain
+
+Version 1.0.2 preserves the dependency key `esprima` through the exact npm
+alias `npm:@stackline/esprima@1.0.0`. That maintained parser has no production,
+optional, or peer dependencies. Release gates require a warning-free packed
+install, a valid npm tree, and zero production and full-lockfile audit findings.

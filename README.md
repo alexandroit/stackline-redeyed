@@ -15,7 +15,7 @@
 **[Security](SECURITY.md)** |
 **[Changelog](CHANGELOG.md)**
 
-**Current package version:** `1.0.1`
+**Current package version:** `1.0.2`
 
 This package is an independent, maintained continuation of
 [`redeyed`](https://github.com/thlorenz/redeyed). It preserves the established
@@ -167,6 +167,12 @@ The maintained suite includes all 187 upstream assertions, more than 1,000
 differential executions, immutable and hostile-key configs, modern parser
 adapters, hashbang edges, browser/modules/types, package audits, and a direct
 `cardinal` adoption check.
+
+The historical dependency key `esprima` resolves exactly to the maintained
+`@stackline/esprima@1.0.0` compatibility package. It preserves the Esprima
+4.0.1 API while keeping the complete production chain under Stackline release,
+CI, audit, and provenance controls. A clean install reports no warnings and
+zero audit findings.
 
 ## Security
 

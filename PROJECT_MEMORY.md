@@ -144,3 +144,9 @@ documentation are public.
 - 2026-08-26: final `1.0.1` artifact published unchanged to Verdaccio and npm;
   public direct/alias smoke, audit, CI, CodeQL, release assets, documentation,
   robots, and aggregate sitemaps passed.
+- 2026-08-30: recursive dependency governance identified the unmaintained
+  upstream Esprima edge. Version `1.0.2` preserves the historical `esprima`
+  key through the exact alias `npm:@stackline/esprima@1.0.0`, whose runtime
+  dependency graph terminates at zero dependencies. Release verification now
+  rejects install warnings, invalid npm trees, and any production or full-lock
+  audit finding before publication.
