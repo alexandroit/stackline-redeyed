@@ -1,6 +1,6 @@
 {
   "name": "@stackline/redeyed",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Source-preserving JavaScript token transforms with immutable configs and parser adapters",
   "type": "commonjs",
   "main": "./redeyed.js",
@@ -92,7 +92,9 @@
     "parser",
     "highlight",
     "immutable",
-    "stackline"
+    "stackline",
+    "syntax-highlighting",
+    "tokenizer"
   ],
   "author": "Stackline Maintainers",
   "contributors": [
