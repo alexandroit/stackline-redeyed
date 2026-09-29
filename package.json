@@ -1,6 +1,6 @@
 {
   "name": "@stackline/redeyed",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Source-preserving JavaScript token transforms with immutable configs and parser adapters",
   "type": "commonjs",
   "main": "./redeyed.js",

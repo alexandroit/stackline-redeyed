@@ -4,7 +4,7 @@
     {
       "name": "@stackline/redeyed",
       "path": "README.md",
-      "version": "1.0.4",
+      "version": "1.0.5",
       "baselineVersion": "1.0.3",
       "keywords": [
         "stackline",
@@ -26,8 +26,8 @@
       "homepage": "https://alexandro.net/docs/vanilla/redeyed/",
       "baselineTarball": "https://registry.npmjs.org/@stackline/redeyed/-/redeyed-1.0.3.tgz",
       "baselineIntegrity": "sha512-9B0SrdnM7egFs8WpgzpNr70vdm9MOexO58SXAWtYVLGzxoErYw3CL516DLaIqDUVcSPQ+LifY+pP9JRwsu54Hw==",
-      "expectedSha512": "884e118d71c4bb6f3594ad4bb449ae71b3f73d355cee075f3308241c644c00e7c548856e20f3bff5afbc04ef7757bd05d0147adc9e610cad181afa401537920d",
-      "tag": "docs-stackline-redeyed-v1.0.4"
+      "expectedSha512": "737ebf10f6479ae1100b75b55ed456f51547bda4af5a9618f7357d1ce217bd28c6091625f3da5a296c7e0bcebc065d8878845978c6aca2fd39370b7369c864fa",
+      "tag": "docs-stackline-redeyed-v1.0.5"
     }
   ]
 }
