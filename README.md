@@ -4,13 +4,13 @@
 
 [![npm version](https://img.shields.io/npm/v/@stackline/redeyed.svg?style=flat-square)](https://www.npmjs.com/package/@stackline/redeyed)
 [![license](https://img.shields.io/npm/l/@stackline/redeyed.svg?style=flat-square)](https://github.com/alexandroit/stackline-redeyed)
-[![GitHub repository](https://img.shields.io/badge/GitHub-alexandroit%2Fstackline-redeyed-181717?style=flat-square&logo=github)](https://github.com/alexandroit/stackline-redeyed)
+[![GitHub repository](https://img.shields.io/badge/GitHub-repository-181717?style=flat-square&logo=github)](https://github.com/alexandroit/stackline-redeyed)
 [![Docs](https://img.shields.io/badge/docs-alexandro.net-0f766e?style=flat-square)](https://alexandro.net/docs/vanilla/redeyed/)
 [![Reddit community](https://img.shields.io/badge/community-r%2FStackline-ff4500?style=flat-square&logo=reddit&logoColor=white)](https://www.reddit.com/r/Stackline/)
 
 **[Documentation](https://alexandro.net/docs/vanilla/redeyed/)** | **[npm](https://www.npmjs.com/package/@stackline/redeyed)** | **[Issues](https://github.com/alexandroit/stackline-redeyed/issues)** | **[Repository](https://github.com/alexandroit/stackline-redeyed)**
 
-**Current package version:** `1.0.4`
+**Current package version:** `1.0.5`
 
 ---
 
@@ -41,7 +41,7 @@ Stackline is not affiliated with or endorsed by the upstream author.
 
 | Item | Value |
 | --- | --- |
-| Package | `@stackline/redeyed@1.0.4` |
+| Package | `@stackline/redeyed@1.0.5` |
 | Node.js runtime | `>=12` |
 | CommonJS / primary entry | `./redeyed.js` |
 | ES module entry | `./index.mjs` |
