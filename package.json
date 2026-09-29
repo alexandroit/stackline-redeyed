@@ -1,6 +1,6 @@
 {
   "name": "@stackline/redeyed",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Source-preserving JavaScript token transforms with immutable configs and parser adapters",
   "type": "commonjs",
   "main": "./redeyed.js",
@@ -84,15 +84,19 @@
     "url": "https://github.com/alexandroit/stackline-redeyed/issues"
   },
   "keywords": [
+    "stackline",
+    "npm-package",
+    "redeyed",
     "javascript",
+    "parser",
+    "typescript",
+    "nodejs",
     "tokens",
     "syntax",
     "transform",
     "source",
-    "parser",
     "highlight",
     "immutable",
-    "stackline",
     "syntax-highlighting",
     "tokenizer"
   ],
