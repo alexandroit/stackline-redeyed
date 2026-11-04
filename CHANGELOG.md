@@ -7,6 +7,12 @@ Versioning.
 
 ## [Unreleased]
 
+## [1.0.6] - 2026-11-04
+
+- Refresh the published Stackline runtime dependencies and security updates for build dependencies.
+- Pin supported CI tooling and validate packed dependency metadata against the release manifest.
+
+
 ## [1.0.3] - 2026-09-28
 
 - Organize package documentation, preserve API and migration examples, and add Stackline community links.

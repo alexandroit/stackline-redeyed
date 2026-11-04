@@ -10,7 +10,7 @@
 
 **[Documentation](https://alexandro.net/docs/vanilla/redeyed/)** | **[npm](https://www.npmjs.com/package/@stackline/redeyed)** | **[Issues](https://github.com/alexandroit/stackline-redeyed/issues)** | **[Repository](https://github.com/alexandroit/stackline-redeyed)**
 
-**Current package version:** `1.0.5`
+**Current package version:** `1.0.6`
 
 ---
 
@@ -41,7 +41,7 @@ Stackline is not affiliated with or endorsed by the upstream author.
 
 | Item | Value |
 | --- | --- |
-| Package | `@stackline/redeyed@1.0.5` |
+| Package | `@stackline/redeyed@1.0.6` |
 | Node.js runtime | `>=12` |
 | CommonJS / primary entry | `./redeyed.js` |
 | ES module entry | `./index.mjs` |
@@ -212,7 +212,7 @@ npm ci
 npm run verify
 ```
 
-Release tooling uses Node.js 24.20.0 and npm 11.19.0. The consumer runtime contract remains the one documented above.
+Release tooling uses Node.js 24.22.2 and npm 11.19.0. The consumer runtime contract remains the one documented above.
 
 ## Consumer Smoke Test
 
@@ -239,7 +239,7 @@ adapters, hashbang edges, browser/modules/types, package audits, and a direct
 `cardinal` adoption check.
 
 The historical dependency key `esprima` resolves exactly to the maintained
-`@stackline/esprima@1.0.0` compatibility package. It preserves the Esprima
+`@stackline/esprima@1.0.3` compatibility package. It preserves the Esprima
 4.0.1 API while keeping the complete production chain under Stackline release,
 CI, audit, and provenance controls. A clean install reports no warnings and
 zero audit findings.

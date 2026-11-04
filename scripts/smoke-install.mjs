@@ -5,6 +5,7 @@ import path from 'node:path'
 import { spawnSync } from 'node:child_process'
 
 const root = path.resolve(new URL('..', import.meta.url).pathname)
+const packageJson = JSON.parse(await readFile(path.join(root, 'package.json'), 'utf8'))
 const temporary = await mkdtemp(path.join(os.tmpdir(), 'stackline-redeyed-'))
 
 try {
@@ -61,7 +62,8 @@ try {
     'package.json'
   ), 'utf8'))
   assert.equal(manifest.name, '@stackline/redeyed')
-  assert.equal(manifest.dependencies.esprima, 'npm:@stackline/esprima@1.0.0')
+  assert.equal(manifest.version, packageJson.version)
+  assert.deepEqual(manifest.dependencies, packageJson.dependencies)
   await rm(tarball, { force: true })
 } finally {
   await rm(temporary, { force: true, recursive: true })
